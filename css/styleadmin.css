@@ -1,0 +1,412 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Baloo Chettan 2', cursive;
+    line-height: 1.5;
+}
+
+#username p
+{
+    position: fixed;
+    top: 40px;
+    right: 10px;
+     font-size: 50px;
+      color:orange;
+      font-weight: bold;
+}
+.title-text
+{
+    font-size: 40px;
+    text-align:center;
+    font-weight: bold;
+    color: white;
+}
+
+/*----NavBar----------------------*/
+#menu-bar
+{
+    width: 50px;
+    height: 10px;
+    margin: 50px 10px 10px 20px;
+    position: fixed;
+    cursor: pointer;
+    z-index: 1;
+
+}
+.bar
+{
+    background: orange;
+    border-radius: 10%;
+    transition: .4s;
+}
+#bar1
+{
+    width: 40px;
+    height: 10px;
+    transform: translateY(-4px);
+}
+#bar2
+{
+    width: 40px;
+    height: 10px;
+}
+#bar3
+{
+    width: 40px;
+    height: 10px;
+    transform: translateY(4px);
+}
+.change .bar
+{
+    background: #fff;
+}
+.change#bar1
+{
+    transform: translateY(6px);
+    rotate: z(45deg);
+
+}
+.change#bar3
+{
+    transform: translateY(-15px);
+    rotate: z(-45deg);
+}
+.change#bar2
+{
+    opacity: 0;
+}
+.nav li a
+{
+    text-decoration: none;
+    color: orange;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 1s ease;
+
+}
+.nav li a:hover
+{
+    color: white;
+    padding-left: 10px;
+
+}
+.nav li .nave
+{
+    color: green!important;
+    
+}
+
+.nav li .nave:hover
+{
+    color: white!important;
+    font-size: 35px;
+    border:none;
+    background: green;
+    border:none;
+    border-radius: 200px;
+}
+
+.nav li .navo
+{
+    color: red; 
+    border-radius: 200px;
+    border:solid 2px red;
+    
+
+}
+.nav li .navo:hover
+{
+    font-size: 35px;
+    color: red!important;
+    border:none;
+}
+.nav li
+{
+    margin: 20px 10px 10px 20px;
+    padding-top: 10px;
+    list-style-type: none; 
+}
+.nav
+{
+    display: none;
+}
+.change-btn
+{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+/*End of NavBar---------------------*/
+
+.header
+{
+    min-height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)), url(../img/madmax.png) center/cover no-repeat fixed;
+    margin-top: auto;
+}
+
+.hero
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+
+.hero .title
+{
+    color: #fff;
+    font-size: 50px;
+}
+
+.hero-button
+{
+    display: inline-block;
+    text-decoration: none!important;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 200px;
+    font-weight: bold;
+    background:orange;
+    color: #ffff;
+    cursor: pointer;
+    border:2px solid orange;
+    margin-top: 10px;
+    transition: all 1s ease-in-out;
+    animation:fromTop;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.hero-button:hover
+{
+    background:#ffff;
+    color: orange;
+    border:none;
+}
+.pulsate
+{
+    animation:pulsate 3s ease-in-out;
+    animation-iteration-count: infinite;
+    opacity: .3;
+    color: black;
+}
+@keyframes pulsate
+{
+    0%
+    {
+        opacity: .3;
+    }
+    50%
+    {
+        opacity:1;
+    }
+    100%
+    {
+        opacity: .3;
+    }
+}
+@keyframes fromTop
+{
+    0%
+    {
+        transform: translateY(-10px);
+    }
+    50%
+    {
+        transform:translateY(10px);
+
+    }
+    100%
+    {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+/*end of header----------*/
+
+/*Special Items*/
+.header-link
+{
+    display:inline-block;
+    position: absolute;
+    bottom: 2%;
+    left:48.5%;
+    background:orange;
+    color: #000;
+    border-radius: 10px;
+    transition: all 2s ease;
+    animation:fromBottom;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.header-link:hover
+{
+    background: #fff;
+}
+@keyframes fromBottom
+{
+    0%
+    {
+        transform: translateY(-10px);
+    }
+    50%
+    {
+        transform:translateY(10px);
+
+    }
+    100%
+    {
+        transform: translateY(-10px);
+    }
+}
+/*End of Special Items*/
+.users
+{
+    min-height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)), url(../img/madmax.png) center/cover no-repeat fixed;
+    margin-top: auto;
+}
+.users .container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+
+.meza {
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: normal;
+   
+    border-collapse: collapse;
+    
+    
+    white-space: nowrap;
+    background: rgba(241, 241, 241, 1);
+    
+    box-shadow: 50px 50px 50rem #69c1c1;
+}
+.meza td, .meza th {
+    text-align: center;
+    padding: 8px;
+    color: #191313;
+}
+button
+{
+ background-color: #4bb1c0 !important;
+ border:none !important;
+}
+button:focus,
+button:hover
+{
+    background-color: green !important;
+}
+.boxy
+{
+   
+    transition:all 2s ease;
+    max-width: 700px;
+    float: none;
+    margin: 150px auto;
+    
+
+
+}
+
+/* cart items*/
+#displaymenu
+{
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)), url(../img/madmax.png) center/cover no-repeat fixed;
+
+}
+img
+{
+    max-width: 100%;
+    height: auto;
+    background:lightblue;
+    background: radial-gradient(white 30%, lightblue 70%);
+}
+.fa-star,
+.fa-star-half
+{
+    color: yellowgreen;
+    padding: 3% 0;
+}
+/* cart items*/
+
+#displaymenu .card
+{
+    background-color:#fff;
+    transition:all 2s ease;
+}
+#displaymenu .card:hover
+{
+    background-color: #fff;
+}
+#displaymenu .card-header
+{
+    color:orange;
+    font-weight: bold;
+}
+#displaymenu .input-group-text
+{
+    background:orange;
+    border-color: #000;
+    color: #000;
+}
+#displaymenu .card input
+{
+    color: #000; 
+}
+
+
+
+#displaymenu .card input::placeholder
+{
+    color: #000;
+}
+.contact-btn
+{
+    color: #000;
+    border-color: #000;
+    background:orange;
+    transition:all 2s ease-in-out;
+}
+.contact-btn:hover
+{
+    background:#c9c1ac;
+    color: #d3325f;
+    border-color: #c9c1ac;
+}
+#orders
+{
+    min-height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)), url(../img/madmax.png) center/cover no-repeat fixed;
+    margin-top: auto;
+}

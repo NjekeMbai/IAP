@@ -1,0 +1,109 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+body
+{
+    background-image: url("sky.jpg");
+    background-position: center;
+    background-size: cover;
+    
+}
+.login-box
+{
+    max-width: 700px;
+    float: none;
+    margin: 150px auto;
+    
+
+
+}
+.login-left h2
+{
+    
+   color: #12ff02;
+
+}
+.login-left
+{
+    background: rgba(12, 62, 20, 0.25);
+    padding: 30px;
+}
+.form-group
+{
+    
+}
+
+.login-right
+{
+    background: white;
+    padding: 30px;
+    
+}
+.login-right h2
+{
+    color: #187c8a;
+}
+/*.form-control
+{
+    background-color: transparent !important;
+}
+*/
+button
+{
+ background-color: #4bb1c0 !important;
+ border:none !important;
+}
+button:focus,
+button:hover
+{
+    background-color: green !important;
+}
+.meza {
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: normal;
+   
+    border-collapse: collapse;
+    width: 80% ;
+    max-width: 40%;
+    white-space: nowrap;
+    background: rgba(211, 211, 211, 0.5);
+    margin-left: 100px auto;
+    box-shadow: 50px 50px 50rem #69c1c1;
+}
+.meza td, .meza th {
+    text-align: center;
+    padding: 8px;
+    color: #191313;
+}
+i
+{
+    color: #ffffff;
+}
+.lead+label
+{
+    color: #12ff02 !important;
+}
+.form-div { margin-top: 100px; border: 1px solid #e0e0e0; }
+#profileDisplay { display: block; height: 210px; width: 60%; margin: 0px auto; border-radius: 50%; }
+.img-placeholder {
+  width: 60%;
+  color: white;
+  height: 100%;
+  background: black;
+  opacity: .7;
+  height: 210px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.img-placeholder h4 {
+  margin-top: 40%;
+  color: white;
+}
+.img-div:hover .img-placeholder {
+  display: block;
+  cursor: pointer;
+}

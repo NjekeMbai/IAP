@@ -1,0 +1,128 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+body
+{
+    background-image: url("sky.jpg");
+    background-position: center;
+    background-size: cover;
+    
+}
+.login-box
+{
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   padding: 30px;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    
+
+
+}
+.login-lefti h2
+{
+    
+   color: #12ff02;
+
+}
+.login-lefti
+{
+    background: rgba(12, 62, 20, 0.25);
+    padding: 100px;
+}
+.form-group
+{
+    
+}
+
+.login-right
+{
+    background: white;
+    padding: 30px;
+    
+}
+.login-right h2
+{
+    color: #187c8a;
+}
+/*.form-control
+{
+    background-color: transparent !important;
+}
+*/
+button
+{
+ background-color: #4bb1c0 !important;
+ border:none !important;
+ margin-left: 40px!important;
+}
+button:focus,
+button:hover
+{
+    background-color: green !important;
+}
+.meza {
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: normal;
+   
+    border-collapse: collapse;
+    width: 80% ;
+    max-width: 40%;
+    white-space: nowrap;
+    background: rgba(211, 211, 211, 0.5);
+    margin-left: 100px auto;
+    box-shadow: 50px 50px 50rem #69c1c1;
+}
+.meza td, .meza th {
+    text-align: center;
+    padding: 8px;
+    color: #191313;
+}
+i
+{
+    color: #ffffff;
+}
+.lead+label
+{
+    color: #12ff02 !important;
+}
+form p
+{
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+form a 
+{
+    color: #fff;
+    margin-left: 40px;
+    font-size: 20px;
+    text-decoration: none;
+}
+form a:focus,
+form a:hover
+{
+    color: green ;
+    font-size: 30px;
+    transition: all 1s ease;
+    text-decoration: none;
+
+}
+.zz
+{
+    color: #fff;
+    margin-left: 40px!important;
+    font-size: 20px;
+    text-decoration: none;
+}
+.zz:focus,
+.zz:hover
+{
+     color: red !important;
+    
+    transition: all 1s ease;
+    text-decoration: none;
+}

@@ -1,0 +1,798 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	font-family: 'Baloo Chettan 2', cursive;
+	line-height: 1.5;
+}
+#username p
+{
+    position: fixed;
+    top: 40px;
+    right: 10px;
+     font-size: 50px;
+      color:orange;
+      font-weight: bold;
+}
+.title-text
+{
+	font-size: 40px;
+	text-align:center;
+	font-weight: bold;
+}
+
+
+/*----NavBar----------------------*/
+#menu-bar
+{
+	width: 50px;
+	height: 10px;
+	margin: 50px 10px 10px 20px;
+	position: fixed;
+	cursor: pointer;
+	z-index: 1;
+
+}
+.bar
+{
+	background: orange;
+	border-radius: 10%;
+	transition: .4s;
+}
+#bar1
+{
+	width: 40px;
+	height: 10px;
+	transform: translateY(-4px);
+}
+#bar2
+{
+	width: 40px;
+	height: 10px;
+}
+#bar3
+{
+	width: 40px;
+	height: 10px;
+	transform: translateY(4px);
+}
+.change .bar
+{
+	background: #fff;
+}
+.change#bar1
+{
+	transform: translateY(6px);
+	rotate: z(45deg);
+
+}
+.change#bar3
+{
+	transform: translateY(-15px);
+	rotate: z(-45deg);
+}
+.change#bar2
+{
+	opacity: 0;
+}
+.nav li a
+{
+	text-decoration: none;
+	color: orange;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: all 1s ease;
+
+}
+.nav li a:hover
+{
+	color: white;
+	padding-left: 10px;
+
+}
+.nav li .nave
+{
+	color: green!important;
+	
+}
+
+.nav li .nave:hover
+{
+	color: white!important;
+	font-size: 35px;
+	border:none;
+	background: green;
+	border:none;
+	border-radius: 200px;
+}
+
+.nav li .navo
+{
+	color: red; 
+	border-radius: 200px;
+	border:solid 2px red;
+	
+
+}
+.nav li .navo:hover
+{
+	font-size: 35px;
+	border:none;
+}
+.nav li
+{
+	margin: 20px 10px 10px 20px;
+	padding-top: 10px;
+	list-style-type: none; 
+}
+.nav
+{
+	display: none;
+}
+.change-btn
+{
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+/*End of NavBar---------------------*/
+
+
+
+
+/*header----------*/
+
+.header
+{
+	min-height: 100vh;
+	background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)), url(../img/picha12.jpg) center/cover no-repeat fixed;
+	margin-top: auto;
+}
+
+.hero
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+
+.hero .title
+{
+	color: #fff;
+	font-size: 50px;
+}
+
+.hero-button
+{
+	display: inline-block;
+	text-decoration: none!important;
+	text-transform: uppercase;
+	padding: 13px 20px;
+	border-radius: 200px;
+	font-weight: bold;
+	background:orange;
+	color: #ffff;
+	cursor: pointer;
+	border:2px solid orange;
+	margin-top: 10px;
+	transition: all 1s ease-in-out;
+	animation:fromTop;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+.hero-button:hover
+{
+	background:#ffff;
+	color: orange;
+	border:none;
+}
+.pulsate
+{
+	animation:pulsate 3s ease-in-out;
+	animation-iteration-count: infinite;
+	opacity: .3;
+	color: black;
+}
+@keyframes pulsate
+{
+	0%
+	{
+		opacity: .3;
+	}
+	50%
+	{
+		opacity:1;
+	}
+	100%
+	{
+		opacity: .3;
+	}
+}
+@keyframes fromTop
+{
+	0%
+	{
+		transform: translateY(-10px);
+	}
+	50%
+	{
+		transform:translateY(10px);
+
+	}
+	100%
+	{
+		transform: translateY(-10px);
+	}
+}
+
+
+
+/*end of header----------*/
+/*Special Items*/
+.header-link
+{
+	display:inline-block;
+	position: absolute;
+	bottom: 2%;
+	left:48.5%;
+	background:orange;
+	color: #000;
+	border-radius: 10px;
+	transition: all 2s ease;
+	animation:fromBottom;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+.header-link:hover
+{
+	background: #fff;
+}
+@keyframes fromBottom
+{
+	0%
+	{
+		transform: translateY(-10px);
+	}
+	50%
+	{
+		transform:translateY(10px);
+
+	}
+	100%
+	{
+		transform: translateY(-10px);
+	}
+}
+/*End of Special Items*/
+
+/*Aboout Us-----------------------*/
+#about
+{
+	padding: 40px;
+}
+.about
+{
+	margin: 30px 0;
+	display: flex;
+
+}
+.about-icon .abicon
+{
+	font-size: 60px;
+	color: orange;
+	margin-right: 20px;
+
+}
+.about-subtitle
+{
+	text-transform: capitalize;
+	color: orange;
+	font-size: 25px;
+
+}
+.about-info
+{
+	margin-top: 10px;
+	line-height: 1.5s;
+
+}
+.about-icon:hover .abicon,
+.about-subtitle:hover
+{
+	transition: transform 2s ease,color 2s ease;
+	transform: translateY(-10px);
+	color: #cd6100;
+	cursor: pointer;
+}
+@media screen and (min-width: 576px)
+{
+	.about-center
+	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.about
+	{
+		flex: 0 0 calc (50% - 16px);
+	}
+}
+@media screen and (min-width: 972px)
+{
+	.about
+	{
+		flex: 0 0 calc(33.3% - 16px);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/*End of Aboout Us-----------------------*/
+/*Menu Section-------------------*/
+.menu-image
+{
+	min-height: 80vh;
+	background:url(../img/aroma-aromatic-assortment-containers-458796.jpg)center/cover no-repeat fixed;
+}
+.menu-text
+{
+	min-height: 80vh;
+	align-items: center;
+	background:orange;
+	columns: #000;
+	padding: 40px 0;
+}
+.menu-text-center
+{
+	width: 90%;
+	margin: 0 auto;
+
+}
+.menu-text h1
+{
+	font-size: 40px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.menu-text p
+{
+	margin:20px 0;
+	line-height: 2;
+
+}
+.menu-text a
+{
+	display: inline-block;
+	text-decoration-style:none;
+	text-transform: uppercase;
+	padding: 13px 20px;
+	border-radius: 200px;
+	font-weight: bold;
+	background:rgba(10,10,10);
+	color: orange;
+	cursor: pointer;
+	border:2px solid #000;
+}
+.menu-text a:hover
+{
+	color: orange;
+	background:#fff;
+	border:none;
+
+}
+@media screen and (min-width: 776px)
+{
+	.menu
+	{
+		display: flex;
+	}
+	.menu-text
+	{
+		flex: 0 0 30%;
+	}
+	.menu-image
+	{
+		flex: 0 0 70%;
+		clip-path: polygon(0 0 ,100% 0, 50% 100%, 0 100%);
+	}
+	.menu
+	{
+		background: orange;
+	}
+}
+
+
+/*End of Menu Section-------------*/
+/*---------Social Icons-------------*/
+#social-icons
+{
+	height: 150px;
+	background:white;
+	text-align: center;
+	padding: 50px 0 50px 0;
+}
+#social-icons a
+{
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 0 5px;
+	font-size: 40px;
+	border-radius: 5px;
+	transition: transform 2s ease, color 2s ease;
+
+
+}
+#social-icons a:hover
+{
+	transform: translateY(-20px);
+
+}
+.facebook
+{
+	color: #3b5998;
+
+}
+.twitter
+{
+	color: #38a1f3;
+}
+.instagram
+{
+	color: #e1306c;
+}
+.yelp
+{
+	color: #db4a39;
+}
+
+/*End of Social Icons----------------*/
+/*Numbers-------------------------*/
+.number
+{
+	text-align: center;
+	background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4));
+	background:url(../img/sky.jpg)center/cover no-repeat fixed;
+	padding: 60px 0;
+	color: #fff;
+}
+.number p
+{
+	font-size: 30px;
+	font-weight: bold;
+
+}
+.number:hover
+{
+	color: orange;
+}
+.number .numbero
+{
+	font-size: 60px;
+	margin: 20px 0;
+
+}
+.number h3
+{
+	text-transform:uppercase;
+}
+@media screen and (min-width:576px)
+{
+	#numbers
+	{
+		display: grid;
+		grid-template-columns:1fr 1fr;
+
+	}
+
+
+}
+@media screen and (min-width: 992px)
+{
+	#numbers
+	{
+		grid-template-columns:repeat(4 , 1fr);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*End of numbers-------------------*/
+/*Card Details-------------------*/
+#food
+{
+	padding: 20px;
+	background:url(../img/picha110.jpg)center/cover no-repeat fixed;
+	
+}
+.food-container
+{
+	max-width: 90vw;
+	margin:0 auto;
+}
+.food-card
+{
+	position: relative;
+	background:linear-gradient(rgba(205,96,0,0.7),rgba(205,96,0,0.7));
+	margin: 20px 0;
+	color: #000;
+	overflow: hidden;
+	padding: 3px;
+	border-radius: 16px;
+	border:1px solid orange;
+	box-shadow: 2px 3px 1px 1px #cd6100;
+}
+#food img
+{
+	width: 100%;
+	min-height: 100%;
+	display: block;
+	transition:transform 4s;
+
+}
+.img-text
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	opacity: 0;
+	transition: opacity 4s;
+
+
+}
+.img-footer
+{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 10px;
+	font-size: 20px;
+	opacity: 0;
+	color: #000;
+	transition: opacity 4s;
+}
+.img-text h1
+{
+	font-size: 30px;
+	margin-bottom: 10px;
+
+}
+.food-card:hover img
+{
+	opacity: 0.4;
+	transform: scale(1.3);
+
+}
+.food-card:hover .img-text,
+.food-card:hover .img-footer
+{
+	opacity: 1;
+}
+.food-btn
+{
+	display: inline-block;
+	background: #000;
+	text-decoration: none;
+	text-transform: capitalize;
+	padding: 12px 32px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 180px;
+	cursor: pointer;
+	margin-top: 16px;
+	transition: all 0.3s ease-in-out;
+	font-size: 18px;
+	outline: none;
+}
+.food-btn:hover
+{
+	color: orange;
+	background: #fff;
+	border:#000;
+	outline: none;
+
+}
+.ndollar
+{
+	font-size: 30px;
+}
+@media screen and (min-width: 576px)
+{
+	.food-container
+	{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap:16px;
+
+	}
+
+
+}
+@media screen and (min-width: 992px)
+{
+	.food-container
+	{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 16px;
+	}
+}
+
+
+
+
+
+
+
+
+
+/*End of Card Details-------------------*/
+
+/*Gallery-------------------*/
+#gallery
+{
+	padding: 40px;
+	background:url(../img/picha110.jpg)center/cover no-repeat fixed;
+
+}
+.gallery-item
+{
+	background:linear-gradient(rgba(241,161,13))rgb(rgb(255,165,0));
+
+}
+.gallery-item img
+{
+	display: block;
+	width: 100%;
+	opacity: 1;
+	transition: opacity 2s ease;
+
+}
+.gallery-item img:hover
+{
+	opacity: 0.5;
+}
+@media screen and (min-width: 576px)
+{
+	#gallery-center
+	{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media screen and (min-width: 992px)
+{
+	#gallery-center
+	{
+		grid-template-columns: repeat(4,1fr);
+	}
+}
+
+/*footer*/
+.footer
+{
+	background: #000;
+	text-align: center;
+
+}
+.footer .text
+{
+	text-transform: uppercase;
+	color: #fff;
+	font-size:24px;
+	margin-top: 20px;
+
+}
+
+/*End of footer*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*End of Gallery-------------------*/
+/*Contact*/
+#contact .card
+{
+	background-color:#000;
+	transition:all 2s ease;
+}
+#contact .card:hover
+{
+	background-color: #fff;
+}
+#contact .card-header
+{
+	color:orange;
+	font-weight: bold;
+}
+#contact .input-group-text
+{
+	background:orange;
+	border-color: #000;
+	color: #000;
+}
+#contact .card input
+{
+	color: #000; 
+}
+
+
+
+#contact .card input::placeholder
+{
+	color: #000;
+}
+.contact-btn
+{
+	color: #000;
+	border-color: #000;
+	background:orange;
+	transition:all 2s ease-in-out;
+}
+.contact-btn:hover
+{
+	background:#c9c1ac;
+	color: #d3325f;
+	border-color: #c9c1ac;
+}
+#back-to-top
+{
+	background:orange;
+	border-radius: 10px;
+	display: inline-block;
+	color: #000;
+}
+.scrollTop
+{
+	position: fixed;
+	bottom:70px;
+	right:10px;
+}
