@@ -73,7 +73,11 @@ if(isset($_POST["change"])){
     			<h2>Change Password</h2>
     			<form action="process_change_password.php" method="post">
 
-    			
+    			<div class="form-group">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="text" placeholder="First Name" name="user"  class="form-control" required>
+        
+        </div>
 
 				<div class="form-group">
 					<i class="fa fa-lock" aria-hidden="true"></i>

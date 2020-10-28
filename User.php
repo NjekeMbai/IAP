@@ -1,5 +1,6 @@
 <?php
 include_once 'Account.php';
+session_start();
 class User implements Account{
 	private $fname;
 	private $sname;
@@ -110,7 +111,7 @@ class User implements Account{
 	public function login ($pdo){
 		try{
 			//prepare a query
-			$stmt = $pdo->prepare("SELECT * FROM user_details WHERE First_name = ? AND Password = ?");
+			/*$stmt = $pdo->prepare("SELECT * FROM user_details WHERE First_name = ? AND Password = ?");
 			$fname = $this->getFname();
 			$password = $this->getPassword();
 			$stmt->bindParam("ss", $fname, $password);
@@ -125,8 +126,44 @@ class User implements Account{
 
 			session_write_close();
 			$result=$stmt->get_result();
-			$row=$result->fetch_assoc();
-			  	 
+			$row=$result->fetch_assoc();*/
+
+			$sql = "SELECT * FROM user_details WHERE First_name = :First_name";
+			$stmt = $pdo->prepare($sql);
+			$username = $this->getFname();
+			$password = $this->getPassword();
+			//bind values
+			$stmt->bindValue(':First_name', $username);
+			//execute
+			$stmt->execute();
+			//fetch row
+			$row = $stmt->fetch(PDO::FETCH_ASSOC);
+			//if $row is false
+			if($row == false){
+				//could not find a user with the username
+				die('Incorrect username or password');
+			}  
+			else{
+				//user account found. Check if password is a match to hashed password in DB
+				$validPassword = password_verify($password, $row['Password']);
+				//if passwords match then login is successful
+				if($validPassword){
+					//provide the user with a login session
+					session_regenerate_id();
+					$_SESSION['logged_in'] = time();
+					$_SESSION['username'] = $row['First_name'];
+					$_SESSION['password'] = $row['Password'];
+					session_write_close();
+					//redirect to our new page
+					header('Location: display.php');
+
+				}
+				else{
+					//if the password was false
+					echo "<script>alert('Password was incorrect!')</script>";
+					echo "<script>window.location='login.php'</script>";
+				}
+			}	 
 
 		}
 		catch(PDOException $e){
@@ -135,13 +172,48 @@ class User implements Account{
 	}
 	public function changePassword($pdo){
 		try{
-			if($this->getOldPass() == $this->getPassword()){
-				if($this->getNewPass()== $this->getConfirmPass()){
-					//prepare statement
-					$stmt = $pdo->prepare("UPDATE `user_details`(`Password`) VALUES (?");
-			$stmt->execute($this->getPassword());
-			return "Password Update!";
+			
+			$sql = "SELECT * FROM user_details WHERE First_name = :First_name";
+			$stmt = $pdo->prepare($sql);
+			$username = $this->getFname();
+			$password = $this->getPassword();
+
+			$oldpass = $this->getOldPass();
+			$newpass = $this->getNewPass();
+			$confirm = $this->getConfirmPass();
+
+			//bind values
+			$stmt->bindValue(':First_name', $username);
+			//execute
+			$stmt->execute();
+			//fetch row
+			$row = $stmt->fetch(PDO::FETCH_ASSOC);
+			//if $row is false
+			if($row == false){
+				//could not find a user with the username
+				die('Incorrect username or password');
+			}  
+			else{
+				//user account found. Check if password is a match to hashed password in DB
+				$validPassword = password_verify($oldpass, $row['Password']);
+				//if passwords match then login is successful
+				if($validPassword){
+					if($newpass == $confirm){
+						$hashedPassword = password_hash($newpass, PASSWORD_DEFAULT);
+						$sql = "UPDATE user_details SET Password = '$hashedPassword' WHERE First_name = '$username'";
+						$stmt = $pdo->prepare($sql);
+						$stmt->execute();
+
+						echo "<script>alert('Password Updated!')</script>";
+						echo "<script>window.location: display.php</script>";
+					}
+					else{
+						echo "<script>alert(New and confirmed passwords do not match!)</script>";
+						echo "<script>window.location: edit.php</script>";
+					}
 				}
+
+
 			}
 		}
 		catch(PDOException $e){
@@ -149,10 +221,11 @@ class User implements Account{
 		}
 	}
 	public function logout($pdo){
-		session_start();
+		
 		session_destroy();
 
-		return "Logged Out!";
+		echo "<script>alert('Logged out!')</script>";
+		echo "<script>window.location='login.php'</script>";
 
 	}
 }
