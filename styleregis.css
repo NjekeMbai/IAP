@@ -67,7 +67,8 @@ button:hover
     max-width: 40%;
     white-space: nowrap;
     background: rgba(211, 211, 211, 0.5);
-    margin-left: 100px auto;
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: 50px 50px 50rem #69c1c1;
 }
 .meza td, .meza th {

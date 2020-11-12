@@ -23,6 +23,9 @@ session_start();
 
     <!-- Bootstrap CSS -->
      <link rel="stylesheet"  href="css/bootstrap.min.css">
+     <script src="jquery.min.js"></script>
+     <script src="orders.js"></script>
+     
 </head>
 <body>
   <div class="container">
@@ -46,6 +49,7 @@ session_start();
             <th>City </th>
              <th>Bio</th>
              <th> Change Password</th>
+             <th>Order Food</th>
             
           </thead>
           <tbody>
@@ -58,10 +62,16 @@ session_start();
                 <td> <?php echo $user['City']; ?> </td>
                 <td> <?php echo $user['Bio']; ?> </td>
                 <td> <a href="edit.php" class="btn btn-info">Change</a> </td>
+                <td> <button id="order-btn" class="btn btn-warning" onclick="function1()">Order</button></td>
               </tr>
             <?php endforeach; ?>
           </tbody>
         </table>
+        <br><br>
+        <div id="order_tab">
+          
+        </div>
+
          <a style="margin-top: 50px;" href="process_logout.php" class="btn btn-danger">Log Out</a>
       </div>
     </div>
